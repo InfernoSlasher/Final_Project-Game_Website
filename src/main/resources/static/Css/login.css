@@ -1,0 +1,17 @@
+.btn{
+    background-color: cadetblue;
+    margin-top: 10px;
+    color: white;
+}
+
+.mb-3 {
+    margin: 5px;
+}
+
+.main {
+    margin-top: 25%;
+    border: 1px solid goldenrod;
+    padding: 20px;
+    align-items: center;
+    align-content: center;
+}

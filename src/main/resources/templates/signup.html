@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="../static/Css/style.css" th:href="@{/Css/style.css}">
+    <link rel="stylesheet" href="../static/Css/login.css" th:href="@{/Css/login.css}">
+</head>
+<body>
+      <div class="registration">
+        <center>
+        <div class="main">
+            <h1>Sign Up New Member</h1>
+        <form method="post" action="#" th:action="@{/signup}">
+         <div class="mb-3">Username
+             <input type="text" required placeholder="username" id="name" name="username" maxlength="16">
+             <br><br>
+         </div>
+         <div class="mb-3">Email
+             <input type="email" required placeholder="email_address" id="email" name="email"><br><br>
+         </div>
+         <div class="mb-3">Password
+             <input type="password" required placeholder="Password" id="pass"  minlength="4" maxlength="8" name="password"><br><br>
+        <!--    <p>show pass</p>
+             <input type="checkbox" id="checkbox">--> 
+         </div>
+         <div class="mb-3">Confirm Password
+             <input type="password" required placeholder="Confirm Password" id="cpass" minlength="4" maxlength="8" name="ConfirmPassword"><br><br><br>
+         </div>
+         <div class="submit">
+             <input type="submit" required onclick="validity" class="btn">
+         </div>
+         <div id="messageContainer" style="display: none; background-color: rgb(126, 233, 233);" role="alert">
+            <h2 th:if="${errorMessage}"
+                style="color: red; "
+                class="alert alert-danger text-center">Invalid username
+                or
+                password, try again</h2>
+        </div>
+        </form>
+    </center>
+    </div>
+</body>
+</html>

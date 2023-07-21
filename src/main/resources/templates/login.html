@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../static/Css/style.css" th:href="@{/Css/style.css}">
+    <link rel="stylesheet" href="../static/Css/login.css" th:href="@{/Css/login.css}">
+</head>
+<body>
+    <center>
+    <form action="#" th:action="@{/login}" method="post">
+        <div class="main">
+        <div class="mb-3">
+            <h1>Login / Sign Up</h1>
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+        </div>
+        <div class="mb-3">
+        <input type="submit" class="btn">
+        </div>
+        Not a Member? <a href="../templates/signup.html" th:href="@{/signup}">Sign Up</a>
+        </div>
+      </form>
+      <div id="messageContainer" style="display: none; background-color: rgb(126, 233, 233);" role="alert">
+        <h2 th:if="${errorMessage}"
+            style="color: red; "
+            class="alert alert-danger text-center">Invalid username
+            or
+            password, try again</h2>
+      </div></center>
+</body>
+</html>
