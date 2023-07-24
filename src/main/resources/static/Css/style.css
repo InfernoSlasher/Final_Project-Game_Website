@@ -81,3 +81,17 @@ form input {
     border-radius: 6px;
     outline: none;
 }
+
+h3 {
+    margin: 50px 50px;
+}
+
+footer {
+    margin-top: 10px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.aboutus {
+    height: 600px;
+}
