@@ -13,7 +13,7 @@
         <center>
         <div class="main">
             <h1>Sign Up New Member</h1>
-        <form method="post" action="#" th:action="@{/signup}">
+        <form method="post" action="#" th:action="@{/signup}" onsubmit="return sp()">
          <div class="mb-3">Username
              <input type="text" required placeholder="username" id="name" name="username" maxlength="16">
              <br><br>
@@ -32,15 +32,19 @@
          <div class="submit">
              <input type="submit" required onclick="validity" class="btn">
          </div>
-         <div id="messageContainer" style="display: none; background-color: rgb(126, 233, 233);" role="alert">
-            <h2 th:if="${errorMessage}"
-                style="color: red; "
-                class="alert alert-danger text-center">Invalid username
-                or
-                password, try again</h2>
-        </div>
         </form>
     </center>
     </div>
+    <script>
+        function sp() {
+            let Password = document.getElementById('password');
+            let ConfirmPassword = document.getElementById('confirmPassword');
+            if(Password.value===ConfirmPassword.value) {
+                alert("Congratulations ! Signup successful !");
+            } else {
+                alert("Please Enter the correct details!");
+            }
+        }
+    </script>
 </body>
 </html>

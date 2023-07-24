@@ -44,10 +44,10 @@ public class finalcontroller {
         model.addAttribute("password", user.getPassword());
         model.addAttribute("email", user.getEmail());
         ser.Add(user);
-       // if (user.getPassword().equals(user.getConfirmPassword())) {
+        if (user.getPassword().equals(user.getConfirmPassword())) {
             
-       //     return "index";
-       // }
+            return "index";
+       }
         
         return "redirect:/";
     }

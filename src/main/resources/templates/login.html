@@ -10,7 +10,7 @@
 </head>
 <body>
     <center>
-    <form action="#" th:action="@{/login}" method="post">
+    <form action="#" th:action="@{/login}" method="post" onsubmit="return sp()">
         <div class="main">
         <div class="mb-3">
             <h1>Login / Sign Up</h1>
@@ -28,12 +28,17 @@
         Not a Member? <a href="../templates/signup.html" th:href="@{/signup}">Sign Up</a>
         </div>
       </form>
-      <div id="messageContainer" style="display: none; background-color: rgb(126, 233, 233);" role="alert">
-        <h2 th:if="${errorMessage}"
-            style="color: red; "
-            class="alert alert-danger text-center">Invalid username
-            or
-            password, try again</h2>
-      </div></center>
+      </center>
+      <script>
+        function sp() {
+            let Password = document.getElementById('password');
+            let ConfirmPassword = document.getElementById('confirmPassword');
+            if(Password.value===ConfirmPassword.value) {
+                alert("Congratulations ! Signup successful !");
+            } else {
+                alert("Please Enter the correct details!");
+            }
+        }
+    </script>
 </body>
 </html>
