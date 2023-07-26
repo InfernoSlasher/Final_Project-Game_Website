@@ -37,9 +37,9 @@
     </div>
     <script>
         function sp() {
-            let Password = document.getElementById('password');
-            let ConfirmPassword = document.getElementById('confirmPassword');
-            if(Password.value===ConfirmPassword.value) {
+            let Password = document.getElementById('pass').value;
+            let ConfirmPassword = document.getElementById('cpass').value;
+            if(Password===ConfirmPassword) {
                 alert("Congratulations ! Signup successful !");
             } else {
                 alert("Please Enter the correct details!");
@@ -48,3 +48,16 @@
     </script>
 </body>
 </html>
+
+ <!--const password = document.getElementById('Password').value;
+const confirmPassword = document.getElementById('cPassword').value;
+
+// comparing both passwords if they match
+if (password === confirmPassword) {
+  return true;            
+}
+else{
+alert("Incorrect Password, please enter similar password!");
+return false 
+}
+} -->
